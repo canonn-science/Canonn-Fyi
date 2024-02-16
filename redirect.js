@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       // Replace the current state with the new URL
-      window.history.replaceState({}, document.title, data.url);
+      // Temp disable - DM
+      // window.history.replaceState({}, document.title, data.url);
 
       // Redirect the user to the returned URL
       window.location.replace(data.url);
